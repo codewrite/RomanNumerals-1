@@ -54,7 +54,8 @@
     <Compile Include="NumeralParsers\RomanNumeralV.cs" />
     <Compile Include="NumeralParsers\RomanNumeral.cs" />
     <Compile Include="NumeralParsers\RomanNumeralI.cs" />
-    <Compile Include="RomanNumeralParser.cs" />
+    <Compile Include="RomanNumeralConverter.cs" />
+    <Compile Include="RomanNumeralValidator.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
