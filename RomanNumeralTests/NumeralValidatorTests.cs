@@ -67,8 +67,9 @@ namespace RomanNumeralTests
 
         [TestCase("IIV")]
         [TestCase("IIX")]
-        [TestCase("XXC")]
         [TestCase("XXL")]
+        [TestCase("XXC")]
+        [TestCase("CCD")]
         [TestCase("CCM")]
         public void IsValidWithInvalidPrefixPatternExpectInvalid(string input)
         {

@@ -39,7 +39,7 @@ namespace RomanNumeral
                 return false;
             }
 
-            if (RepeatedCharsAppearBeforeAny(romanNumeral, 'C', 'M'))
+            if (RepeatedCharsAppearBeforeAny(romanNumeral, 'C', 'D', 'M'))
             {
                 return false;
             }
