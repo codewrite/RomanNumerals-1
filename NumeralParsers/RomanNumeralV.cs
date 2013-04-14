@@ -3,7 +3,7 @@
     public class RomanNumeralV : RomanNumeral
     {
         public RomanNumeralV()
-            : base(5)
+            : base('V', 5)
         {
         }
     }

@@ -3,7 +3,7 @@
     public class RomanNumeralM : RomanNumeral
     {
         public RomanNumeralM()
-            : base(1000)
+            : base('M', 1000)
         {
         }
     }

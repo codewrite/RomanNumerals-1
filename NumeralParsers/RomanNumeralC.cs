@@ -3,13 +3,13 @@
     public class RomanNumeralC : RomanNumeral
     {
         public RomanNumeralC()
-            : base(100)
+            : base('C', 100, 'D', 'M')
         {
         }
 
         public override bool IsPrefix(char? nextCharacter)
         {
-            return IsPrefix(nextCharacter, 'D', 'M');
+            return IsPrefixForPowerOf10(nextCharacter);
         }
     }
 }

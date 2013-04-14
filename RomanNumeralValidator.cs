@@ -14,12 +14,19 @@ namespace RomanNumeral
                 return false;
             }
 
-            if (HasRepeatOfAny(romanNumeral, 'V', 'L', 'D'))
+            if (HasRepeatOfAny(romanNumeral,
+                               new RomanNumeralV().Symbol,
+                               new RomanNumeralL().Symbol,
+                               new RomanNumeralD().Symbol))
             {
                 return false;
             }
 
-            if (MoreThan3InSequence(romanNumeral, 'I', 'X', 'C', 'M'))
+            if (MoreThan3InSequence(romanNumeral,
+                                    new RomanNumeralI().Symbol,
+                                    new RomanNumeralX().Symbol,
+                                    new RomanNumeralC().Symbol,
+                                    new RomanNumeralM().Symbol))
             {
                 return false;
             }
@@ -29,17 +36,17 @@ namespace RomanNumeral
                 return false;
             }
 
-            if (RepeatedCharsAppearBeforeAny(romanNumeral, 'I', 'V', 'X'))
+            if (RepeatedCharsAppearBeforeAny(romanNumeral, new RomanNumeralI()))
             {
                 return false;
             }
 
-            if (RepeatedCharsAppearBeforeAny(romanNumeral, 'X', 'L', 'C'))
+            if (RepeatedCharsAppearBeforeAny(romanNumeral, new RomanNumeralX()))
             {
                 return false;
             }
 
-            if (RepeatedCharsAppearBeforeAny(romanNumeral, 'C', 'D', 'M'))
+            if (RepeatedCharsAppearBeforeAny(romanNumeral, new RomanNumeralC()))
             {
                 return false;
             }
@@ -73,8 +80,11 @@ namespace RomanNumeral
             return false;
         }
 
-        private bool RepeatedCharsAppearBeforeAny(string romanNumeral, char testChar, params char[] subsequentChars)
+        private bool RepeatedCharsAppearBeforeAny(string romanNumeral, RomanNumeral romanSymbol)
         {
+            char testChar = romanSymbol.Symbol;
+            char[] subsequentChars = new char[] { (char)romanSymbol.PrefixableChar1, (char)romanSymbol.PrefixableChar2 };
+ 
             foreach (var subsequentChar in subsequentChars)
             {
                 if (HasRepeatOf(romanNumeral, testChar))

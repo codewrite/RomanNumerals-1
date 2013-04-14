@@ -3,7 +3,7 @@
     public class RomanNumeralL : RomanNumeral
     {
         public RomanNumeralL()
-            : base(50)
+            : base('L', 50)
         {
         }
     }
